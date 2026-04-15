@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact K9 Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="flex flex-col min-h-screen bg-[#FAFAF7]">
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-[#D2B48C] via-[#B8966A] to-[#C0392B] text-[#FAFAF7] py-16 md:py-28">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">Get in Touch</h1>
+                <p class="text-lg md:text-xl opacity-90">We'd love to help you and your furry friend</p>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="py-16 md:py-24 bg-[#FAFAF7]">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <!-- Address -->
+                    <div class="bg-white p-8 rounded-lg shadow border-[#E6E6E6] border text-center">
+                        <i class="fas fa-map-marker-alt text-5xl text-[#C0392B] mb-4"></i>
+                        <h3 class="text-xl font-bold text-[#0F0F10] mb-3">Visit Us</h3>
+                        <p class="text-[#2C2C2C]">123 Pet Street</p>
+                        <p class="text-[#2C2C2C]">Animal City, AC 12345</p>
+                        <p class="text-[#2C2C2C] text-sm text-gray-500 mt-3">Open 7 days a week, 8 AM - 6 PM</p>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="bg-white p-8 rounded-lg shadow border-[#E6E6E6] border text-center">
+                        <i class="fas fa-phone text-5xl text-[#C0392B] mb-4"></i>
+                        <h3 class="text-xl font-bold text-[#0F0F10] mb-3">Call Us</h3>
+                        <a href="tel:+15551234567" class="text-[#C0392B] font-bold text-lg hover:text-[#922B21] transition">
+                            (555) 123-4567
+                        </a>
+                        <p class="text-[#2C2C2C] text-sm mt-3">Mon-Fri: 8 AM - 8 PM<br>Sat-Sun: 9 AM - 5 PM</p>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="bg-white p-8 rounded-lg shadow border-[#E6E6E6] border text-center">
+                        <i class="fas fa-envelope text-5xl text-[#C0392B] mb-4"></i>
+                        <h3 class="text-xl font-bold text-[#0F0F10] mb-3">Email Us</h3>
+                        <a href="mailto:info@k9solutions.com" class="text-[#C0392B] font-bold text-lg hover:text-[#922B21] transition break-all">
+                            info@k9solutions.com
+                        </a>
+                        <p class="text-[#2C2C2C] text-sm mt-3">We respond within 24 hours</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="py-16 md:py-24 bg-[#D2B48C]">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#0F0F10] mb-12 text-center">Send us a Message</h2>
+                    <form class="bg-white p-8 rounded-lg shadow border-[#E6E6E6] border">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-[#0F0F10] font-bold mb-2">First Name</label>
+                                <input type="text" class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B]" placeholder="John" required>
+                            </div>
+                            <div>
+                                <label class="block text-[#0F0F10] font-bold mb-2">Last Name</label>
+                                <input type="text" class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B]" placeholder="Doe" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-[#0F0F10] font-bold mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B]" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-[#0F0F10] font-bold mb-2">Phone</label>
+                            <input type="tel" class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B]" placeholder="(555) 123-4567">
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-[#0F0F10] font-bold mb-2">Service Interested In</label>
+                            <select class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B]">
+                                <option>-- Select a Service --</option>
+                                <option>Basic Obedience Training</option>
+                                <option>Advanced Training</option>
+                                <option>Behavior Correction</option>
+                                <option>Pet Boarding</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-[#0F0F10] font-bold mb-2">Dog's Name & Breed</label>
+                            <input type="text" class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B]" placeholder="Max - Golden Retriever">
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-[#0F0F10] font-bold mb-2">Message</label>
+                            <textarea class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B] h-48" placeholder="Tell us how we can help you and your dog..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-[#C0392B] text-white py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 md:py-24 bg-[#FAFAF7]">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0F0F10] mb-12 text-center">Frequently Asked Questions</h2>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>What's your cancellation policy?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p>We require 48 hours notice for training session cancellations. Boarding cancellations require 7 days notice for a full refund. Emergency cancellations are handled on a case-by-case basis.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>How old should my dog be to start training?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p>We can start basic training with puppies as young as 8 weeks old. Young puppies have short attention spans, so we adapt our methods accordingly. Early socialization and basic commands are great for puppies.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>Do you work with rescue dogs and behavioral issues?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p>Absolutely! We specialize in working with rescue dogs and addressing behavioral issues. Many rescue dogs just need patience, understanding, and proper training to thrive. We've successfully rehabilitated dogs with aggression, anxiety, and other behavioral challenges.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>Do you use positive reinforcement or punishment-based methods?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p>We exclusively use positive reinforcement and reward-based training methods. We never use punishment, electronic collars, or aversive techniques. Research shows positive reinforcement is more effective and humane.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>What's included with boarding?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p>Our boarding services include safe accommodations, meals (your food or ours), daily playtime, exercise, socialization, and 24/7 supervision. Additional services like grooming and medication administration are available for an extra fee.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- Scripts -->
+    <script src="components.js"></script>
+    <script>
+        // FAQ Accordion functionality
+        function initializeFAQ() {
+            const faqButtons = document.querySelectorAll('.faq-button');
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const icon = button.querySelector('i');
+                    
+                    // Close all other FAQ items
+                    faqButtons.forEach(otherButton => {
+                        if (otherButton !== button) {
+                            const otherContent = otherButton.nextElementSibling;
+                            const otherIcon = otherButton.querySelector('i');
+                            otherContent.classList.add('hidden');
+                            otherIcon.classList.remove('fa-chevron-up');
+                            otherIcon.classList.add('fa-chevron-down');
+                        }
+                    });
+                    
+                    // Toggle current FAQ item
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
