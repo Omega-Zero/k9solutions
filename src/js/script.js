@@ -15,7 +15,7 @@ mobileMenuBtn.addEventListener('click', () => {
 mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
-        co nst icon = mobileMenuBtn.querySelector('i');
+        const icon = mobileMenuBtn.querySelector('i');
         icon.classList.remove('fa-times');
         icon.classList.add('fa-bars');
     });
