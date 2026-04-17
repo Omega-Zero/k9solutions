@@ -2,7 +2,7 @@
 async function loadComponents() {
     try {
         // Load header
-        const headerResponse = await fetch('/src/components/header.html');
+        const headerResponse = await fetch('components/header.html');
         const headerHTML = await headerResponse.text();
         const headerElement = document.getElementById('header-component');
         if (headerElement) {
@@ -11,7 +11,7 @@ async function loadComponents() {
         }
 
         // Load footer
-        const footerResponse = await fetch('/src/components/footer.html');
+        const footerResponse = await fetch('components/footer.html');
         const footerHTML = await footerResponse.text();
         const footerElement = document.getElementById('footer-component');
         if (footerElement) {
