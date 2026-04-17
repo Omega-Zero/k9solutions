@@ -8,41 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="flex flex-col min-h-screen bg-gray-50">
-    <!-- Header/Navigation -->
-    <header class="bg-[#FAFAF7] shadow-md sticky top-0 z-50\">
-        <nav class="container mx-auto px-4 py-2 flex items-center justify-between h-20">
-            <!-- Logo -->
-            <div class="flex items-center gap-2 h-full">
-                <img src="./assets/images/k9logo.png" alt="K9 Solutions Logo" class="h-full w-auto object-contain">
-                <span class="text-2xl font-bold text-[#0F0F10]\">K9 Solutions</span>
-            </div>
-
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center gap-8">
-                <a href="index.html" class="text-[#0F0F10] hover:text-[#C0392B] font-medium transition">Home</a>
-                <a href="training.html" class="text-[#0F0F10] hover:text-[#C0392B] font-medium transition">Training</a>
-                <a href="boarding.html" class="text-[#0F0F10] hover:text-[#C0392B] font-medium transition">Boarding</a>
-                <a href="about.html" class="text-[#0F0F10] hover:text-[#C0392B] font-medium transition">About</a>
-                <a href="contact.html" class="text-[#0F0F10] hover:text-[#C0392B] font-medium transition">Contact</a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="mobileMenuBtn" class="md:hidden text-[#0F0F10] text-2xl">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-
-        <!-- Mobile Navigation Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-[#FAFAF7] border-t border-[#E6E6E6]">
-            <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
-                <a href="index.html" class="text-[#0F0F10] hover:text-[#C0392B] font-medium transition">Home</a>
-                <a href="training.html" class="text-[#0F0F10] hover:text-[#C0392B] font-medium transition">Training</a>
-                <a href="boarding.html" class="text-[#0F0F10] hover:text-[#C0392B] font-medium transition">Boarding</a>
-                <a href="about.html" class="text-[#0F0F10] hover:text-[#C0392B] font-medium transition">About</a>
-                <a href="contact.html" class="text-[#0F0F10] hover:text-[#C0392B] font-medium transition">Contact</a>
-            </div>
-        </div>
-    </header>
+    <!-- Header/Navigation Component -->
+    <div id="header-component"></div>
 
     <!-- Main Content -->
     <main class="flex-grow">
@@ -144,96 +111,15 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 md:py-16 mt-auto">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                <!-- Keep in Touch Column -->
-                <div>
-                    <h3 class="text-xl font-bold mb-6 border-b-2 border-amber-600 pb-3">Keep in Touch</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-3">
-                            <i class="fas fa-map-marker-alt text-amber-600 mt-1"></i>
-                            <div>
-                                <p class="font-semibold">Address</p>
-                                <p class="text-gray-400">123 Pet Street, Animal City, AC 12345</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i class="fas fa-phone text-amber-600 mt-1"></i>
-                            <div>
-                                <p class="font-semibold">Phone</p>
-                                <a href="tel:+15551234567" class="text-gray-400 hover:text-amber-600 transition">(555) 123-4567</a>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i class="fas fa-envelope text-amber-600 mt-1"></i>
-                            <div>
-                                <p class="font-semibold">Email</p>
-                                <a href="mailto:info@k9solutions.com" class="text-gray-400 hover:text-amber-600 transition">info@k9solutions.com</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Social Media Column -->
-                <div>
-                    <h3 class="text-xl font-bold mb-6 border-b-2 border-amber-600 pb-3">Follow Us</h3>
-                    <div class="flex gap-4 flex-wrap">
-                        <a href="https://facebook.com" target="_blank" class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition">
-                            <i class="fab fa-facebook-f text-white"></i>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition">
-                            <i class="fab fa-instagram text-white"></i>
-                        </a>
-                        <a href="https://twitter.com" target="_blank" class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition">
-                            <i class="fab fa-twitter text-white"></i>
-                        </a>
-                        <a href="https://youtube.com" target="_blank" class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition">
-                            <i class="fab fa-youtube text-white"></i>
-                        </a>
-                        <a href="https://tiktok.com" target="_blank" class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition">
-                            <i class="fab fa-tiktok text-white"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Our Services Column -->
-                <div>
-                    <h3 class="text-xl font-bold mb-6 border-b-2 border-amber-600 pb-3">Our Services</h3>
-                    <ul class="space-y-3 text-gray-400">
-                        <li class="flex items-center gap-2 hover:text-amber-600 transition cursor-pointer">
-                            <i class="fas fa-check text-amber-600"></i>
-                            <span>Basic Obedience Training</span>
-                        </li>
-                        <li class="flex items-center gap-2 hover:text-amber-600 transition cursor-pointer">
-                            <i class="fas fa-check text-amber-600"></i>
-                            <span>Advanced Training</span>
-                        </li>
-                        <li class="flex items-center gap-2 hover:text-amber-600 transition cursor-pointer">
-                            <i class="fas fa-check text-amber-600"></i>
-                            <span>Behavior Correction</span>
-                        </li>
-                        <li class="flex items-center gap-2 hover:text-amber-600 transition cursor-pointer">
-                            <i class="fas fa-check text-amber-600"></i>
-                            <span>Pet Boarding</span>
-                        </li>
-                        <li class="flex items-center gap-2 hover:text-amber-600 transition cursor-pointer">
-                            <i class="fas fa-check text-amber-600"></i>
-                            <span>Grooming Services</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Copyright -->
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2026 K9 Solutions. All rights reserved. | Professional Pet Training & Boarding</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
 
     <!-- Scripts -->
-    <script src="js/script.js"></script>
+    <script src="/src/js/components.js"></script>
+    <script src="/src/js/script.js"></script>
+    <script>
+        // Load components immediately (DOM is ready at this point)
+        loadComponents();
+    </script>
 </body>
 </html>

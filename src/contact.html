@@ -177,7 +177,8 @@
     <div id="footer-component"></div>
 
     <!-- Scripts -->
-    <script src="js/components.js"></script>
+    <script src="/src/js/components.js"></script>
+    <script src="/src/js/script.js"></script>
     <script>
         // FAQ Accordion functionality
         function initializeFAQ() {
@@ -205,6 +206,14 @@
                 });
             });
         }
+
+        // Load components and initialize features
+        async function loadComponentsAndInit() {
+            await loadComponents();
+            initializeFAQ();
+        }
+        
+        loadComponentsAndInit();
     </script>
 </body>
 </html>
