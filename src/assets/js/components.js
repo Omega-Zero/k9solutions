@@ -10,6 +10,19 @@ async function loadComponents() {
             initializeMobileMenu();
         }
 
+        // Load hero
+        const heroElement = document.getElementById('hero-component');
+        if (heroElement) {
+            const heroResponse = await fetch('components/hero.html');
+            const heroHTML = await heroResponse.text();
+            heroElement.innerHTML = heroHTML;
+
+            const title = heroElement.getAttribute('data-title');
+            const subtitle = heroElement.getAttribute('data-subtitle');
+            if (title) document.getElementById('hero-title').textContent = title;
+            if (subtitle) document.getElementById('hero-subtitle').textContent = subtitle;
+        }
+
         // Load footer
         const footerResponse = await fetch('components/footer.html');
         const footerHTML = await footerResponse.text();
