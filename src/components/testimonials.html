@@ -1,0 +1,102 @@
+<!-- Testimonials -->
+<style>
+    .review-slide { width: 100%; flex-shrink: 0; padding-left: 0.25rem; padding-right: 0.25rem; }
+    .review-arrows { gap: 0.5rem; }
+    @media (min-width: 768px) {
+        .review-slide { padding-left: 1rem; padding-right: 1rem; }
+        .review-arrows { gap: 1rem; }
+    }
+    @media (min-width: 1024px) {
+        .review-slide { width: 50%; }
+    }
+</style>
+<section class="py-16 md:py-24 bg-[#D2B48C]">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#0F0F10] mb-12 text-center">What Our Clients Say</h2>
+        <div class="mx-auto" style="max-width: 48rem;" id="review-container">
+            <div class="review-arrows flex" style="align-items: center;">
+            <!-- Left arrow -->
+            <button id="review-prev" class="flex-shrink-0 w-10 h-10 rounded-full shadow border border-[#B8966A] hover:bg-[#C0A876] transition" style="display: flex; align-items: center; justify-content: center; background-color: inherit;" aria-label="Previous review">
+                <i class="fas fa-chevron-left text-[#C0392B]"></i>
+            </button>
+            <!-- Carousel wrapper -->
+            <div id="review-carousel" class="overflow-hidden rounded-lg" style="flex: 1; min-width: 0; transition: height 0.4s ease;">
+                <div id="review-track" class="flex" style="transition: transform 0.5s ease-in-out;">
+                    <!-- Review 1 -->
+                    <div class="review-slide">
+                        <div class="bg-white p-8 rounded-lg shadow border-[#E6E6E6] border">
+                            <div class="flex items-center gap-2 mb-4">
+                                <div class="flex gap-1">
+                                    <i class="fas fa-star text-[#C0392B]"></i>
+                                    <i class="fas fa-star text-[#C0392B]"></i>
+                                    <i class="fas fa-star text-[#C0392B]"></i>
+                                    <i class="fas fa-star text-[#C0392B]"></i>
+                                    <i class="fas fa-star text-[#C0392B]"></i>
+                                </div>
+                            </div>
+                            <p class="text-[#2C2C2C] mb-4 italic">
+                                "We called Scott to help us with our rescue dog&#8217;s fear reactivity. We noticed difference after the first lesson.
+                                Scott is patient, friendly, adaptable, and clear in his instructions. The facility is always a clean and welcoming environment."
+                            </p>
+                            <p class="font-bold text-[#0F0F10]">- Amy H.</p>
+                        </div>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="review-slide">
+                        <div class="bg-white p-8 rounded-lg shadow border-[#E6E6E6] border">
+                            <div class="flex items-center gap-2 mb-4">
+                                <div class="flex gap-1">
+                                    <i class="fas fa-star text-[#C0392B]"></i>
+                                    <i class="fas fa-star text-[#C0392B]"></i>
+                                    <i class="fas fa-star text-[#C0392B]"></i>
+                                    <i class="fas fa-star text-[#C0392B]"></i>
+                                    <i class="fas fa-star text-[#C0392B]"></i>
+                                </div>
+                            </div>
+                            <p class="text-[#2C2C2C] mb-4 italic">
+                                "K9 Solutions was the answer to our dog problems. We arrived with a manic, fearful, aggressive puppy.
+                                Walks and just generally being outside with our pup was an anxiety producing event. We stopped inviting friends over because Rocky thought he needed to protect the house.
+                                Scott gave us the tools and the ability to take control of his bad behavior. We are truly amazed at how far Rocky has come.
+                                He regularly attends the group dog class as a well behaved participant. He now brings us joy! Thank you Scott and Tara for giving us our sanity back."
+                            </p>
+                            <p class="font-bold text-[#0F0F10]">- Lori Y</p>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="review-slide">
+                        <div class="bg-white p-8 rounded-lg shadow border-[#E6E6E6] border">
+                            <div class="flex items-center gap-2 mb-4">
+                                <div class="flex gap-1">
+                                    <i class="fas fa-star text-[#C0392B]"></i>
+                                    <i class="fas fa-star text-[#C0392B]"></i>
+                                    <i class="fas fa-star text-[#C0392B]"></i>
+                                    <i class="fas fa-star text-[#C0392B]"></i>
+                                    <i class="fas fa-star text-[#C0392B]"></i>
+                                </div>
+                            </div>
+                            <p class="text-[#2C2C2C] mb-4 italic">
+                                "Very knowledgeable trainer.
+                                Friendly and caring to the k9. Reasonable rates. Many training tactics with different environments and situations.
+                                Advance training available in different fields.
+                                Highly recommended by me, shelters, law enforcement, other safety agencies. For pets or work dogs."
+                            </p>
+                            <p class="font-bold text-[#0F0F10]">- Thomas C</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right arrow -->
+            <button id="review-next" class="flex-shrink-0 w-10 h-10 rounded-full shadow border border-[#B8966A] hover:bg-[#C0A876] transition" style="display: flex; align-items: center; justify-content: center; background-color: inherit;" aria-label="Next review">
+                <i class="fas fa-chevron-right text-[#C0392B]"></i>
+            </button>
+            </div>
+
+            <!-- Dot indicators -->
+            <div id="review-dots" class="flex justify-center gap-2 mt-6">
+                <button class="w-3 h-3 rounded-full bg-[#C0392B] transition" data-index="0" aria-label="Go to review 1"></button>
+                <button class="w-3 h-3 rounded-full bg-[#E6E6E6] transition" data-index="1" aria-label="Go to review 2"></button>
+                <button class="w-3 h-3 rounded-full bg-[#E6E6E6] transition" data-index="2" aria-label="Go to review 3"></button>
+            </div>
+        </div>
+    </div>
+</section>

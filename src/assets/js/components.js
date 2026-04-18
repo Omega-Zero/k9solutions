@@ -31,6 +31,15 @@ async function loadComponents() {
             footerElement.innerHTML = footerHTML;
         }
 
+        // Load testimonials
+        const testimonialsElement = document.getElementById('testimonials-component');
+        if (testimonialsElement) {
+            const testimonialsResponse = await fetch('components/testimonials.html');
+            const testimonialsHTML = await testimonialsResponse.text();
+            testimonialsElement.innerHTML = testimonialsHTML;
+            initializeReviewCarousel();
+        }
+
         // Initialize page features after components are loaded
         if (typeof initializePageFeatures === 'function') {
             initializePageFeatures();
@@ -38,6 +47,100 @@ async function loadComponents() {
     } catch (error) {
         console.error('Error loading components:', error);
     }
+}
+
+// Initialize review carousel
+function initializeReviewCarousel() {
+    var track = document.getElementById('review-track');
+    var carousel = document.getElementById('review-carousel');
+    var container = document.getElementById('review-container');
+    if (!track || !carousel) return;
+
+    var slides = track.children;
+    var dots = document.querySelectorAll('#review-dots button');
+    var prevBtn = document.getElementById('review-prev');
+    var nextBtn = document.getElementById('review-next');
+    var totalSlides = slides.length;
+    var current = 0;
+    var autoplayTimer;
+
+    function isLargeScreen() {
+        return window.innerWidth >= 1024;
+    }
+
+    function getMaxIndex() {
+        return isLargeScreen() ? totalSlides - 2 : totalSlides - 1;
+    }
+
+    function getSlidePercent() {
+        return isLargeScreen() ? 50 : 100;
+    }
+
+    function updateContainerWidth() {
+        if (container) {
+            container.style.maxWidth = isLargeScreen() ? '64rem' : '48rem';
+        }
+    }
+
+    function updateHeight() {
+        if (isLargeScreen()) {
+            var h1 = slides[current] ? slides[current].scrollHeight : 0;
+            var h2 = slides[current + 1] ? slides[current + 1].scrollHeight : 0;
+            carousel.style.height = Math.max(h1, h2) + 'px';
+        } else {
+            var slide = slides[current];
+            if (slide) {
+                carousel.style.height = slide.scrollHeight + 'px';
+            }
+        }
+    }
+
+    function updateDots() {
+        for (var i = 0; i < dots.length; i++) {
+            var active = (isLargeScreen()) ? (i === current || i === current + 1) : (i === current);
+            if (active) {
+                dots[i].className = 'w-3 h-3 rounded-full bg-[#C0392B] transition';
+            } else {
+                dots[i].className = 'w-3 h-3 rounded-full bg-[#E6E6E6] transition';
+            }
+        }
+    }
+
+    function goTo(index) {
+        var maxIdx = getMaxIndex();
+        if (index > maxIdx) index = 0;
+        if (index < 0) index = maxIdx;
+        current = index;
+        track.style.transform = 'translateX(-' + (current * getSlidePercent()) + '%)';
+        updateDots();
+        updateHeight();
+    }
+
+    function onResize() {
+        updateContainerWidth();
+        if (current > getMaxIndex()) current = getMaxIndex();
+        goTo(current);
+    }
+
+    function startAutoplay() {
+        autoplayTimer = setInterval(function() { goTo(current + 1); }, 6000);
+    }
+
+    function resetAutoplay() {
+        clearInterval(autoplayTimer);
+        startAutoplay();
+    }
+
+    prevBtn.addEventListener('click', function() { goTo(current - 1); resetAutoplay(); });
+    nextBtn.addEventListener('click', function() { goTo(current + 1); resetAutoplay(); });
+    for (var i = 0; i < dots.length; i++) {
+        dots[i].addEventListener('click', function() { goTo(parseInt(this.dataset.index)); resetAutoplay(); });
+    }
+
+    updateContainerWidth();
+    updateHeight();
+    window.addEventListener('resize', onResize);
+    startAutoplay();
 }
 
 // Initialize mobile menu functionality
