@@ -30,53 +30,143 @@
             </div>
         </section>
 
-        <!-- Training Section -->
-        <section id="training" class="py-16 md:py-24 bg-[#FAFAF7]">
+        <!-- Training & Boarding Section -->
+        <section id="services" class="py-16 md:py-20 bg-[#FAFAF7]">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#0F0F10] mb-12 text-center">Our Training Programs</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0F0F10] mb-4 md:mb-3 text-center">Our Services</h2>
+                <p class="text-[#2C2C2C] text-lg mb-12 md:mb-10 text-center">Professional training programs and boarding services for your dog</p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="flex flex-col items-center md:items-start bg-white p-6 md:p-8 rounded-lg shadow hover:shadow-lg transition border-[#E6E6E6] border">
+                    <!-- Basic Training Card -->
+                    <a href="training.html" class="flex flex-col bg-white p-6 md:p-8 rounded-lg shadow hover:shadow-lg transition border-[#E6E6E6] border group">
                         <i class="fas fa-graduation-cap text-4xl text-[#C0392B] mb-4"></i>
-                        <h3 class="text-xl font-bold text-[#0F0F10] mb-3">Basic Obedience</h3>
-                        <p class="text-[#2C2C2C]">Learn the fundamentals of dog training including sit, stay, and come commands.</p>
-                    </div>
-                    <div class="flex flex-col items-center md:items-start bg-white p-6 md:p-8 rounded-lg shadow hover:shadow-lg transition border-[#E6E6E6] border">
+                        <h3 class="text-xl font-bold text-[#0F0F10] mb-3 group-hover:text-[#C0392B] transition">Basic Training</h3>
+                        <p class="text-[#2C2C2C] mb-4">Foundation obedience courses for puppies and dogs of all ages.</p>
+                        <ul class="text-[#2C2C2C] text-sm space-y-2 mb-4 flex-grow">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-[#C0392B] mt-1 flex-shrink-0"></i>
+                                <span>Puppy Obedience (12 weeks – 5 months)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-[#C0392B] mt-1 flex-shrink-0"></i>
+                                <span>Basic Obedience (6 months+)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-[#C0392B] mt-1 flex-shrink-0"></i>
+                                <span>Board & Train – 2-week immersive program</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-[#C0392B] mt-1 flex-shrink-0"></i>
+                                <span>Sit, stay, recall, heel & leash walking</span>
+                            </li>
+                        </ul>
+                        <span class="text-[#C0392B] font-bold group-hover:underline mt-auto">Learn More &rarr;</span>
+                    </a>
+
+                    <!-- Specialized Training Card -->
+                    <a href="training.html#specialized" class="flex flex-col bg-white p-6 md:p-8 rounded-lg shadow hover:shadow-lg transition border-[#E6E6E6] border group">
                         <i class="fas fa-medal text-4xl text-[#C0392B] mb-4"></i>
-                        <h3 class="text-xl font-bold text-[#0F0F10] mb-3">Advanced Training</h3>
-                        <p class="text-[#2C2C2C]">Advanced techniques and specialized training for competitive and service dogs.</p>
-                    </div>
-                    <div class="flex flex-col items-center md:items-start bg-white p-6 md:p-8 rounded-lg shadow hover:shadow-lg transition border-[#E6E6E6] border">
-                        <i class="fas fa-heart text-4xl text-[#C0392B] mb-4"></i>
-                        <h3 class="text-xl font-bold text-[#0F0F10] mb-3">Behavior Correction</h3>
-                        <p class="text-[#2C2C2C]">Professional help with aggression, anxiety, and other behavioral issues.</p>
-                    </div>
+                        <h3 class="text-xl font-bold text-[#0F0F10] mb-3 group-hover:text-[#C0392B] transition">Specialized Training</h3>
+                        <p class="text-[#2C2C2C] mb-4">Advanced programs for behavior modification, e-collar work, and tracking.</p>
+                        <ul class="text-[#2C2C2C] text-sm space-y-2 mb-4 flex-grow">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-[#C0392B] mt-1 flex-shrink-0"></i>
+                                <span>Behavior Modification (aggression focused)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-[#C0392B] mt-1 flex-shrink-0"></i>
+                                <span>E-Collar Training & Board and Train</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-[#C0392B] mt-1 flex-shrink-0"></i>
+                                <span>Man Tracking (SAR & sport)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-[#C0392B] mt-1 flex-shrink-0"></i>
+                                <span>Blood Tracking (hunting & search)</span>
+                            </li>
+                        </ul>
+                        <span class="text-[#C0392B] font-bold group-hover:underline mt-auto">Learn More &rarr;</span>
+                    </a>
+
+                    <!-- Boarding Card -->
+                    <a href="boarding.html" class="flex flex-col bg-white p-6 md:p-8 rounded-lg shadow hover:shadow-lg transition border-[#E6E6E6] border group">
+                        <i class="fas fa-bed text-4xl text-[#C0392B] mb-4"></i>
+                        <h3 class="text-xl font-bold text-[#0F0F10] mb-3 group-hover:text-[#C0392B] transition">Boarding</h3>
+                        <p class="text-[#2C2C2C] mb-4">A safe, comfortable home away from home for your furry friend.</p>
+                        <ul class="text-[#2C2C2C] text-sm space-y-2 mb-4 flex-grow">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-[#C0392B] mt-1 flex-shrink-0"></i>
+                                <span>Climate-controlled rooms with premium bedding</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-[#C0392B] mt-1 flex-shrink-0"></i>
+                                <span>24/7 staff monitoring & supervision</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-[#C0392B] mt-1 flex-shrink-0"></i>
+                                <span>Daily playtime, walks & socialization</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-[#C0392B] mt-1 flex-shrink-0"></i>
+                                <span>Special diets & medication care available</span>
+                            </li>
+                        </ul>
+                        <span class="text-[#C0392B] font-bold group-hover:underline mt-auto">Learn More &rarr;</span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Boarding Section -->
-        <section id="boarding" class="py-16 md:py-24 bg-[#D2B48C]">
+        <!-- Why Choose Us -->
+        <section class="py-16 md:py-20 bg-[#D2B48C]">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#0F0F10] mb-12 text-center">Pet Boarding Services</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="flex flex-col items-center md:items-start bg-white p-6 md:p-8 rounded-lg shadow border-[#E6E6E6] border">
-                        <i class="fas fa-bed text-4xl text-[#C0392B] mb-4"></i>
-                        <h3 class="text-xl font-bold text-[#0F0F10] mb-3">Comfortable Accommodations</h3>
-                        <p class="text-[#2C2C2C]">Climate-controlled rooms with comfortable bedding, regular feeding, and constant supervision.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0F0F10] mb-12 md:mb-10 text-center">Why Choose K9 Solutions?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-check-circle text-3xl text-[#C0392B]"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-[#0F0F10] mb-2">Owner Education</h3>
+                            <p class="text-[#0F0F10]">We invest time teaching owners how to reinforce training at home for lasting behavior change.</p>
+                        </div>
                     </div>
-                    <div class="flex flex-col items-center md:items-start bg-white p-6 md:p-8 rounded-lg shadow border-[#E6E6E6] border">
-                        <i class="fas fa-running text-4xl text-[#C0392B] mb-4"></i>
-                        <h3 class="text-xl font-bold text-[#0F0F10] mb-3">Daily Activities</h3>
-                        <p class="text-[#2C2C2C]">Playtime, exercise, and socialization with other dogs in a safe, supervised environment.</p>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-check-circle text-3xl text-[#C0392B]"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-[#0F0F10] mb-2">Results-Driven</h3>
+                            <p class="text-[#0F0F10]">We focus on delivering measurable results with follow-up support to ensure long-term success.</p>
+                        </div>
                     </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-check-circle text-3xl text-[#C0392B]"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-[#0F0F10] mb-2">Certified Professionals</h3>
+                            <p class="text-[#0F0F10]">Our trainers hold industry certifications from recognized organizations and continually update their skills.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-check-circle text-3xl text-[#C0392B]"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-[#0F0F10] mb-2">Customized Programs</h3>
+                            <p class="text-[#0F0F10]">We tailor training programs to meet each dog's unique needs, age, and temperament.</p>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-16 md:py-24 bg-[#FAFAF7]">
+        <section id="about" class="py-16 md:py-20 bg-[#FAFAF7]">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#0F0F10] mb-8 text-center">About Us</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0F0F10] mb-8 md:mb-6 text-center">About Us</h2>
                 <div class="max-w-3xl mx-auto text-center">
                     <p class="text-[#2C2C2C] text-lg mb-6">
                         Our names are Scott and Tara Holliday, and we are the owners of K9 Solutions, Maryland branch. 
@@ -93,9 +183,9 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-16 md:py-24 bg-[#D2B48C]">
+        <section id="contact" class="py-16 md:py-20 bg-[#D2B48C]">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#0F0F10] mb-12 text-center">Contact Us</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0F0F10] mb-12 md:mb-10 text-center">Contact Us</h2>
                 <div class="max-w-2xl mx-auto">
                     <form class="bg-white p-6 md:p-8 rounded-lg shadow border-[#E6E6E6] border">
                         <div class="mb-6">
