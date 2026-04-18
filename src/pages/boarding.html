@@ -22,13 +22,14 @@
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl font-bold text-[#0F0F10] mb-12 text-center">Boarding Requirements & Information</h2>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 items-start">
                     <!-- Check In/Out -->
-                    <div class="bg-white p-8 rounded-lg shadow border-[#E6E6E6] border">
-                        <div class="flex items-center gap-3 mb-4">
+                    <details class="bg-white p-8 rounded-lg shadow border-[#E6E6E6] border">
+                        <summary class="flex items-center gap-3 mb-4">
                             <i class="fas fa-clock text-3xl text-[#C0392B]"></i>
                             <h3 class="text-2xl font-bold text-[#0F0F10]">Check In/Out Times</h3>
-                        </div>
+                            <i class="fas fa-chevron-down text-[#C0392B] ml-auto chevron-icon"></i>
+                        </summary>
                         <div class="bg-[#F5F5F5] p-4 rounded-lg mb-4">
                             <p class="text-[#2C2C2C] font-semibold mb-2">Standard Hours (Sunday - Saturday):</p>
                             <p class="text-[#0F0F10] text-lg font-bold">8:00 AM - 10:00 AM</p>
@@ -45,14 +46,15 @@
                                 <li><strong>Easter:</strong> Closed</li>
                             </ul>
                         </div>
-                    </div>
+                    </details>
 
                     <!-- Vaccinations -->
-                    <div class="bg-white p-8 rounded-lg shadow border-[#E6E6E6] border">
-                        <div class="flex items-center gap-3 mb-4">
+                    <details class="bg-white p-8 rounded-lg shadow border-[#E6E6E6] border">
+                        <summary class="flex items-center gap-3 mb-4">
                             <i class="fas fa-certificate text-3xl text-[#C0392B]"></i>
                             <h3 class="text-2xl font-bold text-[#0F0F10]">Vaccinations</h3>
-                        </div>
+                            <i class="fas fa-chevron-down text-[#C0392B] ml-auto chevron-icon"></i>
+                        </summary>
                         <p class="text-[#0F0F10] font-bold mb-3 text-lg">Required for ALL PETS</p>
                         <div class="space-y-3 text-sm text-[#2C2C2C] mb-4">
                             <div class="flex items-start gap-2">
@@ -71,19 +73,20 @@
                         <div class="bg-[#FFF3CD] border border-[#FFE69C] p-3 rounded text-sm text-[#856404] mb-4">
                             <p><strong>Important:</strong> Due to concerns for human and animal safety, we are unable to make exceptions to vaccination requirements.</p>
                         </div>
-                        <div class="text-center">
+                        <div class="text-center mt-8">
                             <a href="vaccinations.html" class="inline-block bg-[#C0392B] text-white px-6 py-2 rounded-lg font-bold hover:bg-[#922B21] transition">
                                 View Vaccination Schedule
                             </a>
                         </div>
-                    </div>
+                    </details>
 
                     <!-- Medications -->
-                    <div class="bg-white p-8 rounded-lg shadow border-[#E6E6E6] border">
-                        <div class="flex items-center gap-3 mb-4">
+                    <details class="bg-white p-8 rounded-lg shadow border-[#E6E6E6] border">
+                        <summary class="flex items-center gap-3 mb-4">
                             <i class="fas fa-pills text-3xl text-[#C0392B]"></i>
                             <h3 class="text-2xl font-bold text-[#0F0F10]">Medications</h3>
-                        </div>
+                            <i class="fas fa-chevron-down text-[#C0392B] ml-auto chevron-icon"></i>
+                        </summary>
                         <p class="text-[#2C2C2C] mb-4"><strong>Medication administration is provided at no additional charge.</strong></p>
                         <div class="space-y-3 text-sm text-[#2C2C2C]">
                             <div class="flex items-start gap-2">
@@ -103,14 +106,15 @@
                                 <p>Provide sufficient medication for at least two additional days in case of delayed return</p>
                             </div>
                         </div>
-                    </div>
+                    </details>
 
                                         <!-- Food Requirements -->
-                    <div class="bg-white p-8 rounded-lg shadow border-[#E6E6E6] border">
-                        <div class="flex items-center gap-3 mb-4">
+                    <details class="bg-white p-8 rounded-lg shadow border-[#E6E6E6] border">
+                        <summary class="flex items-center gap-3 mb-4">
                             <i class="fas fa-bowl-food text-3xl text-[#C0392B]"></i>
                             <h3 class="text-2xl font-bold text-[#0F0F10]">Food Requirements</h3>
-                        </div>
+                            <i class="fas fa-chevron-down text-[#C0392B] ml-auto chevron-icon"></i>
+                        </summary>
                         <p class="text-[#2C2C2C] mb-4">Please bring your pet's regular food from home. We feed pets twice per day.</p>
                         <div class="space-y-3 text-sm text-[#2C2C2C]">
                             <div class="bg-[#F5F5F5] p-3 rounded">
@@ -126,7 +130,7 @@
                                 <p>Please inform us if your pet's food requires refrigeration.</p>
                             </div>
                         </div>
-                    </div>
+                    </details>
 
 
                 </div>
