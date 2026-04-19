@@ -68,12 +68,40 @@ function initContactForm() {
     }
 }
 
+// Force autoplay on iOS Safari which may block it despite muted+playsinline
+function initHeroVideo() {
+    const video = document.getElementById('hero-video');
+    if (!video) return;
+
+    function tryPlay() {
+        var playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(function() {
+                // Autoplay blocked — retry on first user interaction
+                document.addEventListener('touchstart', function handler() {
+                    video.play();
+                    document.removeEventListener('touchstart', handler);
+                }, { once: true });
+            });
+        }
+    }
+
+    // Ensure muted attribute is set programmatically (iOS sometimes ignores the HTML attribute)
+    video.muted = true;
+    video.setAttribute('playsinline', '');
+
+    // Try playing immediately and also after metadata loads
+    tryPlay();
+    video.addEventListener('loadedmetadata', tryPlay, { once: true });
+}
+
 // Initialize all interactive features after components load
 function initializePageFeatures() {
     initMobileMenu();
     initSmoothScroll();
     initContactForm();
     initCardAnimations();
+    initHeroVideo();
 }
 
 // Add animation on scroll for cards
