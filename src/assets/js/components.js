@@ -7,7 +7,6 @@ async function loadComponents() {
         const headerElement = document.getElementById('header-component');
         if (headerElement) {
             headerElement.innerHTML = headerHTML;
-            initializeMobileMenu();
         }
 
         // Load hero
