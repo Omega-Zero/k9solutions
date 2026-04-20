@@ -15,3 +15,15 @@ details > summary .chevron-icon {
 details[open] > summary .chevron-icon {
     transform: rotate(180deg);
 }
+
+/* Initial state for animated cards */
+.shadow {
+    opacity: 0;
+    transform: translateY(30px);
+    will-change: opacity, transform;
+}
+
+.shadow.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
