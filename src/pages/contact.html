@@ -7,6 +7,11 @@
     <link rel="icon" type="image/png" href="assets/images/k9logo.png">
     <link rel="stylesheet" href="assets/css/tailwind.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .faq-button-active {
+            background-color: #D2B48C;
+        }
+    </style>
 </head>
 <body class="flex flex-col min-h-screen bg-[#FAFAF7]">
     <!-- Header Component -->
@@ -115,23 +120,41 @@
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl font-bold text-[#0F0F10] mb-12 text-center">Frequently Asked Questions</h2>
                 <div class="max-w-3xl mx-auto space-y-4">
-                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
-                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
-                            <span>What's your cancellation policy?</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
-                            <p>We require 48 hours notice for training session cancellations. Boarding cancellations require 7 days notice for a full refund. Emergency cancellations are handled on a case-by-case basis.</p>
-                        </div>
-                    </div>
-
+                    <!-- Training Programs -->
                     <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
                         <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
                             <span>How old should my dog be to start training?</span>
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
-                            <p>We can start basic training with puppies as young as 8 weeks old. Young puppies have short attention spans, so we adapt our methods accordingly. Early socialization and basic commands are great for puppies.</p>
+                            <p>We offer training for puppies as young as 12 weeks old. Our <strong>Puppy Obedience program</strong> ($330 for four one-hour private sessions) is designed specifically for puppies aged 12 weeks to 5 months and focuses on establishing a strong foundation in obedience and socialization during this critical developmental period. For dogs 6 months and older, our <strong>Basic Obedience program</strong> covers essential commands like sit, stay, recall, and leash walking. We adapt all training methods to your dog's age and developmental stage to ensure success.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>What training programs do you offer?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p>We offer several training programs to meet different needs:</p>
+                            <ul class="list-disc list-inside mt-3 space-y-2">
+                                <li><strong>Puppy Obedience</strong> - $330 (4 sessions) for puppies 12 weeks to 5 months</li>
+                                <li><strong>Basic Obedience</strong> - $330 (4 sessions) for dogs 6 months and older</li>
+                                <li><strong>Board and Train (Non E-Collar)</strong> - $1,400 (2-week intensive program) covering sit, down, place, heel, and proper mannerisms</li>
+                                <li><strong>Behavior Modification</strong> - $655 (6 sessions) for dogs with aggression and behavioral challenges</li>
+                            </ul>
+                            <p class="mt-3">Each program includes private one-hour training sessions tailored to your dog's needs. For details on all programs, visit our training page.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>What's your training methodology?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p>We use positive, motivational-based training methods exclusively. As certified balanced trainers, we focus on building confidence, communication, and clear understanding between you and your dog. We believe in teaching owners to become their dog's trainer, building lasting habits and strengthening the bond between pets and their families. Our goal is to ensure your dog behaves appropriately at home, in public, and in social environments.</p>
                         </div>
                     </div>
 
@@ -141,17 +164,28 @@
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
-                            <p>Absolutely! We specialize in working with rescue dogs and addressing behavioral issues. Many rescue dogs just need patience, understanding, and proper training to thrive. We've successfully rehabilitated dogs with aggression, anxiety, and other behavioral challenges.</p>
+                            <p>Absolutely! We specialize in working with rescue dogs and dogs with behavioral issues. Many rescue dogs just need patience, understanding, and proper training to thrive. We've successfully worked with dogs dealing with aggression, anxiety, and other behavioral challenges. Our <strong>Behavior Modification program</strong> is specifically designed to address aggressive and challenging behaviors. Every dog deserves the opportunity to be their best self, and we're committed to helping them get there.</p>
                         </div>
                     </div>
 
                     <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
                         <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
-                            <span>Do you use positive reinforcement or punishment-based methods?</span>
+                            <span>How long have you been training dogs?</span>
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
-                            <p>We exclusively use positive reinforcement and reward-based training methods. We never use punishment, electronic collars, or aversive techniques. Research shows positive reinforcement is more effective and humane.</p>
+                            <p>Scott and Tara Holliday have been working with dogs since the mid-1990s, with over two decades of experience. We've helped many people with various forms of dog training ranging from basic obedience to advanced tracking and behavior modification. We opened K9 Solutions Center in 2018, and our experience gives us a unique perspective on working with dogs of all types and temperaments. We continue to stay current with the latest in dog behavior science and training techniques.</p>
+                        </div>
+                    </div>
+
+                    <!-- Boarding -->
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>What's your daily boarding rate?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p><strong>Daily boarding is $45 per day</strong> and includes safe accommodations, meals (your dog's food or ours), daily playtime, exercise, socialization, and 24/7 supervision. You can also add a 20-minute walk for just $10 extra. For extended stays or special needs, contact us for more information.</p>
                         </div>
                     </div>
 
@@ -161,7 +195,162 @@
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
-                            <p>Our boarding services include safe accommodations, meals (your food or ours), daily playtime, exercise, socialization, and 24/7 supervision. Additional services like special dietary needs and medication administration are available for an extra fee.</p>
+                            <p>Our daily boarding ($45/day) includes:</p>
+                            <ul class="list-disc list-inside mt-3 space-y-2">
+                                <li>Safe, comfortable accommodations</li>
+                                <li>Two meals per day (bring your dog's regular food or ask about our options)</li>
+                                <li>Daily playtime and exercise</li>
+                                <li>Socialization with other dogs</li>
+                                <li>24/7 supervision</li>
+                                <li>Medication administration at no additional charge</li>
+                            </ul>
+                            <p class="mt-3">We can also provide additional services like special dietary needs accommodation or extra exercise. Check-in/out times are 8-10 AM or 6-7 PM (or alternate times for an additional $25 fee).</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>What are your boarding check-in and check-out times?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p><strong>Standard check-in/out times are:</strong></p>
+                            <ul class="list-disc list-inside mt-3 space-y-2">
+                                <li>8:00 AM - 10:00 AM, or</li>
+                                <li>6:00 PM - 7:00 PM</li>
+                            </ul>
+                            <p class="mt-3">If you need a different time, alternate times are available for an additional fee of $25. During holiday periods like Christmas Eve, special hours may apply, so contact us for details.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>What vaccinations are required for boarding?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p><strong>All pets boarding at K9 Solutions must have current vaccinations.</strong> Required vaccines include:</p>
+                            <ul class="list-disc list-inside mt-3 space-y-1">
+                                <li>Rabies (required by state)</li>
+                                <li>Distemper</li>
+                                <li>Hepatitis</li>
+                                <li>Leptospirosis</li>
+                                <li>Parainfluenza</li>
+                                <li>Parvovirus</li>
+                                <li>Bordetella (Kennel Cough)</li>
+                            </ul>
+                            <p class="mt-3"><strong>Important requirements:</strong></p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>All vaccines must be administered at least 48 hours prior to check-in</li>
+                                <li>All vaccines must be given by a licensed veterinarian</li>
+                                <li>Written proof of vaccination is required at check-in</li>
+                            </ul>
+                            <p class="mt-3 font-semibold">Due to concerns for human and animal safety, we cannot make exceptions to vaccination requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>What should I bring for my dog's boarding stay?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p>Please bring:</p>
+                            <ul class="list-disc list-inside mt-3 space-y-2">
+                                <li><strong>Your dog's regular food</strong> divided into two separate meals in Ziploc bags (or let us know if you'd prefer us to provide food)</li>
+                                <li><strong>Written proof of current vaccinations</strong> from your veterinarian</li>
+                                <li><strong>Any medications</strong> with clear administration instructions</li>
+                                <li><strong>Feeding instructions</strong> if your dog has special dietary needs</li>
+                                <li>Favorite toys (optional, but dogs enjoy them)</li>
+                                <li>A blanket or item with your scent (optional)</li>
+                            </ul>
+                            <p class="mt-3">If you're bringing canned food, please label it clearly and bring a lid if your dog eats less than one can per feeding.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>Can you administer medications during boarding?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p>Yes! <strong>Medication administration is provided at no additional charge.</strong> To ensure your dog receives proper care:</p>
+                            <ul class="list-disc list-inside mt-3 space-y-2">
+                                <li>Provide all medications at check-in</li>
+                                <li>Document administration procedures in writing</li>
+                                <li>Bring a complete list of all medications and dosages</li>
+                                <li>Provide enough medication for at least two additional days in case of delayed return</li>
+                            </ul>
+                            <p class="mt-3">Clear communication is key to keeping your dog healthy and comfortable.</p>
+                        </div>
+                    </div>
+
+                    <!-- Policies & General -->
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>What's your cancellation policy?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p><strong>Training Sessions:</strong> We require 48 hours notice for cancellations to receive a refund or reschedule.</p>
+                            <p class="mt-3"><strong>Boarding:</strong> Cancellations require 7 days notice for a full refund.</p>
+                            <p class="mt-3"><strong>Emergency Situations:</strong> Emergency cancellations are handled on a case-by-case basis. Please contact us as soon as possible.</p>
+                            <p class="mt-3">For any questions about cancellations, call us at (301) 895-8198 or email Scott@K9SolutionsCenterMD.com.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>Do you work with dogs of all sizes and breeds?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p>Yes! We work with dogs of all sizes, breeds, and ages (from puppies to seniors). Each dog is unique, and we customize our training approach based on individual temperament, experience level, and learning pace. Whether you have a small companion dog, a large breed, or a mixed breed, we're equipped to help you achieve your training goals. Our diverse experience working with different dogs and temperaments allows us to develop the right strategy for each pet.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>Do you offer Board and Train programs?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p>Yes! Our <strong>Board and Train (Non E-Collar) program</strong> is a 2-week intensive program for $1,400. Your dog will receive comprehensive training in a structured environment where we focus on:</p>
+                            <ul class="list-disc list-inside mt-3 space-y-2">
+                                <li>Core commands: sit, down, place, heel</li>
+                                <li>Good mannerisms and leash-based training</li>
+                                <li>Confidence building for home and social scenarios</li>
+                                <li>Real-world behavioral expectations</li>
+                            </ul>
+                            <p class="mt-3">By the end of the program, your dog will have a strong foundation of obedience and the confidence to behave appropriately in every scenario. We also provide follow-up support to help you maintain the training at home.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>How do I schedule a training session or boarding?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p>Scheduling is easy! You have several options:</p>
+                            <ul class="list-disc list-inside mt-3 space-y-2">
+                                <li><strong>Call us:</strong> (301) 895-8198</li>
+                                <li><strong>Email us:</strong> Scott@K9SolutionsCenterMD.com</li>
+                                <li><strong>Visit us:</strong> 5656 New Germany Rd, Grantsville, MD 21536</li>
+                                <li><strong>Use the contact form:</strong> Fill out the form on this page and we'll respond within 32 hours</li>
+                            </ul>
+                            <p class="mt-3"><strong>Hours:</strong> Monday, Wednesday - Saturday, 10 AM - 7 PM (Closed Sunday & Tuesday)</p>
+                            <p class="mt-3">Whether you want to discuss your dog's specific needs or book a session, we're here to help!</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-[#E6E6E6] border rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left font-bold text-[#0F0F10] hover:bg-[#D2B48C] transition flex items-center justify-between faq-button">
+                            <span>Do you offer follow-up support after training?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 py-4 bg-gray-50 text-[#2C2C2C]">
+                            <p>Absolutely! We believe in building lasting habits and strengthening the bond between you and your dog. Our philosophy emphasizes teaching owners to become their dog's trainer, so we provide support and guidance to help you maintain training success at home. Whether you're in a private session program or a Board and Train program, we work with you to ensure your dog continues to thrive after completing their training. Feel free to contact us with questions or to discuss follow-up training needs.</p>
                         </div>
                     </div>
                 </div>
@@ -176,40 +365,8 @@
     <script src="assets/js/components.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
-        // FAQ Accordion functionality
-        function initializeFAQ() {
-            const faqButtons = document.querySelectorAll('.faq-button');
-            faqButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const content = button.nextElementSibling;
-                    const icon = button.querySelector('i');
-                    
-                    // Close all other FAQ items
-                    faqButtons.forEach(otherButton => {
-                        if (otherButton !== button) {
-                            const otherContent = otherButton.nextElementSibling;
-                            const otherIcon = otherButton.querySelector('i');
-                            otherContent.classList.add('hidden');
-                            otherIcon.classList.remove('fa-chevron-up');
-                            otherIcon.classList.add('fa-chevron-down');
-                        }
-                    });
-                    
-                    // Toggle current FAQ item
-                    content.classList.toggle('hidden');
-                    icon.classList.toggle('fa-chevron-down');
-                    icon.classList.toggle('fa-chevron-up');
-                });
-            });
-        }
-
-        // Load components and initialize features
-        async function loadComponentsAndInit() {
-            await loadComponents();
-            initializeFAQ();
-        }
-        
-        loadComponentsAndInit();
+        // Load components immediately (DOM is ready at this point)
+        loadComponents();
     </script>
 </body>
 </html>

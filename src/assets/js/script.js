@@ -125,6 +125,37 @@ function initHeroVideo() {
     window.addEventListener('load', tryPlay, { once: true });
 }
 
+// FAQ Accordion functionality
+function initFAQ() {
+    const faqButtons = document.querySelectorAll('.faq-button');
+    if (faqButtons.length === 0) return; // Exit if no FAQ buttons found
+    
+    faqButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            // Close all other FAQ items
+            faqButtons.forEach(otherButton => {
+                if (otherButton !== button) {
+                    const otherContent = otherButton.nextElementSibling;
+                    const otherIcon = otherButton.querySelector('i');
+                    otherContent.classList.add('hidden');
+                    otherIcon.classList.remove('fa-chevron-up');
+                    otherIcon.classList.add('fa-chevron-down');
+                    otherButton.classList.remove('faq-button-active');
+                }
+            });
+            
+            // Toggle current FAQ item
+            content.classList.toggle('hidden');
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+            button.classList.toggle('faq-button-active');
+        });
+    });
+}
+
 // Initialize all interactive features after components load
 function initializePageFeatures() {
     initMobileMenu();
@@ -132,6 +163,7 @@ function initializePageFeatures() {
     initContactForm();
     initCardAnimations();
     initHeroVideo();
+    initFAQ();
 }
 
 // Add animation on scroll for cards

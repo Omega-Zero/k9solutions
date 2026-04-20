@@ -339,14 +339,3 @@ function initializeCardAnimations() {
     document.head.appendChild(style);
 }
 
-// Initialize all functions when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    initializeSmoothScroll();
-    initializeContactForm();
-    initializeCardAnimations();
-    
-    // Initialize FAQ if on contact page
-    if (typeof initializeFAQ === 'function') {
-        initializeFAQ();
-    }
-});
