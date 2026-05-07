@@ -360,6 +360,47 @@ function initFAQ() {
     });
 }
 
+// Handle opening accordion sections based on URL hash
+function initBoardingAccordion() {
+    // List of boarding section IDs that can be opened via hash
+    const boardingIds = [
+        'check-in-out',
+        'vaccinations',
+        'medications',
+        'food-requirements',
+        'pricing',
+        'accommodations'
+    ];
+
+    function openSectionFromHash() {
+        const hash = window.location.hash.substring(1); // Remove the # character
+        
+        if (hash && boardingIds.includes(hash)) {
+            const element = document.getElementById(hash);
+            if (element) {
+                // Check if it's a details element
+                if (element.tagName === 'DETAILS') {
+                    element.open = true;
+                    
+                    // Scroll to the element after a short delay to ensure it's fully expanded
+                    setTimeout(() => {
+                        element.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 50);
+                }
+            }
+        }
+    }
+
+    // Open section on initial page load
+    openSectionFromHash();
+
+    // Listen for hash changes (e.g., if user clicks a link with a hash on the same page)
+    window.addEventListener('hashchange', openSectionFromHash);
+}
+
 // Initialize all interactive features after components load
 function initializePageFeatures() {
     initMobileMenu();
@@ -369,6 +410,7 @@ function initializePageFeatures() {
     initHeroVideo();
     initFAQ();
     initImageCarousels();
+    initBoardingAccordion();
 }
 
 // Add animation on scroll for cards

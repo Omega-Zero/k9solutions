@@ -10,7 +10,7 @@ details > summary::-webkit-details-marker {
     display: none;
 }
 details > summary .chevron-icon {
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
 }
 details[open] > summary .chevron-icon {
     transform: rotate(180deg);
