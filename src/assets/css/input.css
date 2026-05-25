@@ -27,3 +27,10 @@ details[open] > summary .chevron-icon {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Team leader cards container - enlarged on desktop */
+@media (min-width: 768px) {
+    .team-leaders-container {
+        max-width: 52.8rem;
+    }
+}
