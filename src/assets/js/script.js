@@ -48,6 +48,65 @@ function initMobileMenu() {
     }
 }
 
+function initContactForm() {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('[type="submit"]');
+        const globalErrorEl = document.querySelector('[data-fs-error=""]');
+
+        // Reset global error
+        if (globalErrorEl) {
+            globalErrorEl.style.display = 'none';
+            globalErrorEl.textContent = '';
+        }
+
+        // Disable button while sending
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+        }
+
+        try {
+            const response = await fetch('https://formspree.io/f/xlgkeppa', {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                form.style.display = 'none';
+                const successEl = document.querySelector('[data-fs-success]');
+                if (successEl) successEl.style.display = '';
+            } else {
+                const json = await response.json().catch(() => ({}));
+                const msg = (json.errors || []).map(err => err.message).join(' ') ||
+                    'Something went wrong. Please try again.';
+                if (globalErrorEl) {
+                    globalErrorEl.textContent = msg;
+                    globalErrorEl.style.display = '';
+                }
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                }
+            }
+        } catch {
+            if (globalErrorEl) {
+                globalErrorEl.textContent = 'Network error. Please check your connection and try again.';
+                globalErrorEl.style.display = '';
+            }
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }
+        }
+    });
+}
+
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -378,6 +437,7 @@ function initBoardingAccordion() {
 function initializePageFeatures() {
     initMobileMenu();
     initSmoothScroll();
+    initContactForm();
     initCardAnimations();
     initHeroVideo();
     initFAQ();

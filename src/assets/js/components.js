@@ -70,11 +70,6 @@ async function loadComponents() {
             }
         }
 
-        // Initialize Formspree after the success component is in the DOM
-        if (document.getElementById('contact-form') && typeof window.formspree === 'function') {
-            window.formspree('initForm', { formElement: '#contact-form', formId: 'xlgkeppa' });
-        }
-
         // Initialize page features after components are loaded
         if (typeof initializePageFeatures === 'function') {
             initializePageFeatures();
