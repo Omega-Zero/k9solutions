@@ -199,20 +199,25 @@
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl font-bold text-[#0F0F10] mb-12 md:mb-10 text-center">Contact Us</h2>
                 <div class="max-w-2xl mx-auto">
-                    <form class="bg-white p-6 md:p-8 rounded-lg shadow border-[#E6E6E6] border">
+                    <div id="form-success-component"></div>
+
+                    <form id="contact-form" class="bg-white p-6 md:p-8 rounded-lg shadow border-[#E6E6E6] border">
                         <div class="mb-6">
                             <label class="block text-[#0F0F10] font-bold mb-2">Name</label>
-                            <input type="text" class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B]" placeholder="Your Name">
+                            <input type="text" name="name" data-fs-field class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B]" placeholder="Your Name" required>
+                            <span data-fs-error="name" class="text-red-600 text-xs mt-1 block"></span>
                         </div>
                         <div class="mb-6">
                             <label class="block text-[#0F0F10] font-bold mb-2">Email</label>
-                            <input type="email" class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B]" placeholder="Your Email">
+                            <input type="email" name="email" data-fs-field class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B]" placeholder="Your Email" required>
+                            <span data-fs-error="email" class="text-red-600 text-xs mt-1 block"></span>
                         </div>
                         <div class="mb-6">
                             <label class="block text-[#0F0F10] font-bold mb-2">Message</label>
-                            <textarea class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B] h-32" placeholder="Your Message"></textarea>
+                            <textarea name="message" data-fs-field class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B] h-32" placeholder="Your Message" required></textarea>
+                            <span data-fs-error="message" class="text-red-600 text-xs mt-1 block"></span>
                         </div>
-                        <button type="submit" class="w-full bg-[#C0392B] text-white py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
+                        <button type="submit" data-fs-submit-btn class="w-full bg-[#C0392B] text-white py-3 rounded-lg font-bold hover:bg-[#922B21] transition disabled:opacity-60 disabled:cursor-not-allowed">
                             Send Message
                         </button>
                     </form>
@@ -228,6 +233,7 @@
     <div id="footer-component"></div>
 
     <!-- Scripts -->
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
     <script src="assets/js/components.js"></script>
     <script src="assets/js/script.js"></script>
     <script>

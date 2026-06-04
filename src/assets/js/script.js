@@ -63,33 +63,6 @@ function initSmoothScroll() {
     });
 }
 
-function initContactForm() {
-    const contactForm = document.querySelector('form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const nameInput = contactForm.querySelector('input[type="text"]');
-            const emailInput = contactForm.querySelector('input[type="email"]');
-            const messageInput = contactForm.querySelector('textarea');
-            
-            if (nameInput && emailInput && messageInput) {
-                const name = nameInput.value;
-                const email = emailInput.value;
-                const message = messageInput.value;
-                
-                if (name && email && message) {
-                    // Show success message
-                    alert('Thank you for your message! We will get back to you soon.');
-                    contactForm.reset();
-                } else {
-                    alert('Please fill in all fields.');
-                }
-            }
-        });
-    }
-}
-
 function initImageCarousels() {
     const hosts = document.querySelectorAll('[data-component="image-carousel"]');
     if (!hosts.length) return;
@@ -405,7 +378,6 @@ function initBoardingAccordion() {
 function initializePageFeatures() {
     initMobileMenu();
     initSmoothScroll();
-    initContactForm();
     initCardAnimations();
     initHeroVideo();
     initFAQ();

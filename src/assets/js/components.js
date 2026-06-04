@@ -61,6 +61,20 @@ async function loadComponents() {
             slot.dataset.componentLoaded = 'true';
         }
 
+        // Load form success/error message component
+        const formSuccessElement = document.getElementById('form-success-component');
+        if (formSuccessElement) {
+            const formSuccessResponse = await fetch('components/form-success.html');
+            if (formSuccessResponse.ok) {
+                formSuccessElement.innerHTML = await formSuccessResponse.text();
+            }
+        }
+
+        // Initialize Formspree after the success component is in the DOM
+        if (document.getElementById('contact-form') && typeof window.formspree === 'function') {
+            window.formspree('initForm', { formElement: '#contact-form', formId: 'xlgkeppa' });
+        }
+
         // Initialize page features after components are loaded
         if (typeof initializePageFeatures === 'function') {
             initializePageFeatures();
@@ -284,34 +298,6 @@ function initializeSmoothScroll() {
             }
         });
     });
-}
-
-// Contact Form Submission
-function initializeContactForm() {
-    const contactForm = document.querySelector('form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const nameInput = contactForm.querySelector('input[type="text"]');
-            const emailInput = contactForm.querySelector('input[type="email"]');
-            const messageInput = contactForm.querySelector('textarea');
-            
-            if (nameInput && emailInput && messageInput) {
-                const name = nameInput.value;
-                const email = emailInput.value;
-                const message = messageInput.value;
-                
-                if (name && email && message) {
-                    // Show success message
-                    alert('Thank you for your message! We will get back to you soon.');
-                    contactForm.reset();
-                } else {
-                    alert('Please fill in all fields.');
-                }
-            }
-        });
-    }
 }
 
 // Add animation on scroll for cards
