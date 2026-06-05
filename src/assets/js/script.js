@@ -71,9 +71,21 @@ function initContactForm() {
         }
 
         try {
+            const formData = new FormData(form);
+            const firstName = form.querySelector('[name="first_name"]');
+            const lastName = form.querySelector('[name="last_name"]');
+            const nameField = form.querySelector('[name="name"]');
+            let subject = 'New Contact Form Submission';
+            if (firstName && lastName) {
+                subject = `New Contact Form Submission from ${firstName.value.trim()} ${lastName.value.trim()}`;
+            } else if (nameField) {
+                subject = `New Contact Form Submission from ${nameField.value.trim()}`;
+            }
+            formData.append('_subject', subject);
+
             const response = await fetch('https://formspree.io/f/xlgkeppa', {
                 method: 'POST',
-                body: new FormData(form),
+                body: formData,
                 headers: { 'Accept': 'application/json' }
             });
 
