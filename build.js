@@ -79,6 +79,13 @@ if (fs.existsSync(videosDir)) {
   });
 }
 
+// Copy Font Awesome from src/assets/fontawesome to dist/assets/fontawesome
+const fontawesomeDir = path.join('src', 'assets', 'fontawesome');
+if (fs.existsSync(fontawesomeDir)) {
+  copyRecursiveSync(fontawesomeDir, path.join('dist', 'assets', 'fontawesome'));
+  console.log('Copied fontawesome assets');
+}
+
 // Copy components from src/components to dist/components
 const componentsDir = path.join('src', 'components');
 if (!fs.existsSync(path.join('dist', 'components'))) {
