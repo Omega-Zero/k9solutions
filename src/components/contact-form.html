@@ -1,0 +1,72 @@
+<!-- Success message (shown after successful Formspree submission) -->
+<div data-fs-success style="display:none" aria-live="polite" class="bg-white p-10 rounded-lg shadow border-[#E6E6E6] border text-center">
+    <div class="flex justify-center mb-5">
+        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+            <i class="fas fa-check text-3xl text-green-600"></i>
+        </div>
+    </div>
+    <h3 class="text-2xl font-bold text-[#0F0F10] mb-3">Message Sent!</h3>
+    <p class="text-[#2C2C2C] text-lg mb-2">Thank you for reaching out to K9 Solutions.</p>
+    <p class="text-[#2C2C2C]">We typically respond within 32 hours. In the meantime, feel free to call us at <a href="tel:+13018958198" class="text-[#C0392B] font-bold hover:text-[#922B21]">(301) 895-8198</a>.</p>
+</div>
+
+<!-- Global error message (shown on Formspree submission failure) -->
+<div data-fs-error style="display:none" aria-live="polite" class="mb-6 bg-red-50 border border-red-200 text-red-700 px-5 py-4 rounded-lg text-sm font-medium"></div>
+
+<form id="contact-form" class="bg-white p-8 rounded-lg shadow border-[#E6E6E6] border">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div>
+            <label class="block text-[#0F0F10] font-bold mb-2">First Name</label>
+            <input type="text" name="first_name" data-fs-field class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B]" placeholder="John" required>
+            <span data-fs-error="first_name" class="text-red-600 text-xs mt-1 block"></span>
+        </div>
+        <div>
+            <label class="block text-[#0F0F10] font-bold mb-2">Last Name</label>
+            <input type="text" name="last_name" data-fs-field class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B]" placeholder="Doe" required>
+            <span data-fs-error="last_name" class="text-red-600 text-xs mt-1 block"></span>
+        </div>
+    </div>
+
+    <div class="mb-6">
+        <label class="block text-[#0F0F10] font-bold mb-2">Email</label>
+        <input type="email" name="email" data-fs-field class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B]" placeholder="john@example.com" required>
+        <span data-fs-error="email" class="text-red-600 text-xs mt-1 block"></span>
+    </div>
+
+    <div class="mb-6">
+        <label class="block text-[#0F0F10] font-bold mb-2">Phone</label>
+        <input type="tel" name="phone" class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B]" placeholder="(555) 123-4567" required>
+    </div>
+
+    <div class="mb-6">
+        <label class="block text-[#0F0F10] font-bold mb-2">Service Interested In</label>
+        <select name="service" class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B]" required>
+            <option value="">-- Select a Service --</option>
+            <option>Puppy Obedience</option>
+            <option>Basic Obedience</option>
+            <option>Board and Train (Non E-Collar)</option>
+            <option>Behavior Modification</option>
+            <option>Ecollar Class</option>
+            <option>Board and Train (E-Collar)</option>
+            <option>Man Tracking</option>
+            <option>Blood Tracking</option>
+            <option>Pet Boarding</option>
+            <option>General Inquiry</option>
+        </select>
+    </div>
+
+    <div class="mb-6">
+        <label class="block text-[#0F0F10] font-bold mb-2">Dog's Name &amp; Breed</label>
+        <input type="text" name="dog_info" class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B]" placeholder="Max - Golden Retriever" required>
+    </div>
+
+    <div class="mb-6">
+        <label class="block text-[#0F0F10] font-bold mb-2">Message</label>
+        <textarea name="message" data-fs-field class="w-full px-4 py-2 border border-[#E6E6E6] rounded-lg focus:outline-none focus:border-[#C0392B] h-48" placeholder="Tell us how we can help you and your dog..." required></textarea>
+        <span data-fs-error="message" class="text-red-600 text-xs mt-1 block"></span>
+    </div>
+
+    <button type="submit" data-fs-submit-btn class="w-full bg-[#C0392B] text-white py-3 rounded-lg font-bold hover:bg-[#922B21] transition disabled:opacity-60 disabled:cursor-not-allowed">
+        Send Message
+    </button>
+</form>

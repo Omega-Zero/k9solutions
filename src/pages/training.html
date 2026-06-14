@@ -7,6 +7,24 @@
     <link rel="icon" type="image/png" href="assets/images/k9logo.png">
     <link rel="stylesheet" href="assets/css/tailwind.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <style>
+        #contact-modal {
+            border: none;
+            padding: 0;
+            border-radius: 0.75rem;
+            width: min(calc(100% - 2rem), 42rem);
+            max-height: 90vh;
+        }
+        @media (max-width: 640px) {
+            #contact-modal {
+                width: calc(100% - .5rem);
+                border-radius: 0.5rem;
+            }
+        }
+        #contact-modal::backdrop {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    </style>
 </head>
 <body class="flex flex-col min-h-screen bg-[#FAFAF7]">
     <!-- Header Component -->
@@ -69,7 +87,7 @@
                                 <span class="text-[#0F0F10]"><strong>Critical Development</strong> - Shape behavior during key growth stages</span>
                             </div>
                         </div>
-                        <button class="block mx-auto md:block bg-[#C0392B] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
+                        <button type="button" data-open-contact-modal data-service="Puppy Obedience" class="block mx-auto md:block bg-[#C0392B] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
                             Contact
                         </button>
                     </div>
@@ -100,7 +118,7 @@
                                 <span class="text-[#0F0F10]"><strong>Essential Commands</strong> - Sit, stay, recall, and leash walking</span>
                             </div>
                         </div>
-                        <button class="block mx-auto md:block bg-[#C0392B] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
+                        <button type="button" data-open-contact-modal data-service="Basic Obedience" class="block mx-auto md:block bg-[#C0392B] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
                             Contact
                         </button>
                     </div>
@@ -167,7 +185,7 @@
                                 <span class="text-[#0F0F10]"><strong>Confidence Building</strong> - Prepare for home and social scenarios</span>
                             </div>
                         </div>
-                        <button class="block mx-auto md:block bg-[#C0392B] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
+                        <button type="button" data-open-contact-modal data-service="Board and Train (Non E-Collar)" class="block mx-auto md:block bg-[#C0392B] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
                             Contact
                         </button>
                     </div>
@@ -221,7 +239,7 @@
                                 <span class="text-[#0F0F10]"><strong>Aggression Focus</strong> - Specialized for aggressive behavior</span>
                             </div>
                         </div>
-                        <button class="block mx-auto md:block bg-[#C0392B] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
+                        <button type="button" data-open-contact-modal data-service="Behavior Modification" class="block mx-auto md:block bg-[#C0392B] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
                             Contact
                         </button>
                     </div>
@@ -252,7 +270,7 @@
                                 <span class="text-[#0F0F10]"><strong>Remote Collar Training</strong> - Enhanced control and communication</span>
                             </div>
                         </div>
-                        <button class="block mx-auto md:block bg-[#C0392B] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
+                        <button type="button" data-open-contact-modal data-service="Ecollar Class" class="block mx-auto md:block bg-[#C0392B] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
                             Contact
                         </button>
                     </div>
@@ -304,7 +322,7 @@
                                 <span class="text-[#0F0F10]"><strong>Public Outings & Review</strong> - At least one public outing and 90-minute pickup review with Q&A</span>
                             </div>
                         </div>
-                        <button class="block mx-auto md:block bg-[#C0392B] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
+                        <button type="button" data-open-contact-modal data-service="Board and Train (E-Collar)" class="block mx-auto md:block bg-[#C0392B] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
                             Contact
                         </button>
                     </div>
@@ -339,7 +357,7 @@
                                 <span class="text-[#0F0F10]"><strong>Professional Application</strong> - SAR and sport ready</span>
                             </div>
                         </div>
-                        <button class="block mx-auto md:block bg-[#C0392B] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
+                        <button type="button" data-open-contact-modal data-service="Man Tracking" class="block mx-auto md:block bg-[#C0392B] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
                             Contact
                         </button>
                     </div>
@@ -380,7 +398,7 @@
                                 <span class="text-[#0F0F10]"><strong>Professional Methods</strong> - Expert systematic approach</span>
                             </div>
                         </div>
-                        <button class="block mx-auto md:block bg-[#C0392B] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
+                        <button type="button" data-open-contact-modal data-service="Blood Tracking" class="block mx-auto md:block bg-[#C0392B] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#922B21] transition">
                             Contact
                         </button>
                     </div>
@@ -444,6 +462,22 @@
 
     <!-- Footer Component -->
     <div id="footer-component"></div>
+
+    <!-- Contact Form Modal -->
+    <dialog id="contact-modal" aria-labelledby="contact-modal-title">
+        <div class="bg-white rounded-xl overflow-hidden flex flex-col" style="max-height:90vh">
+            <div class="flex items-center justify-between px-8 py-5 bg-[#D2B48C] border-b border-[#b5985f] flex-shrink-0">
+                <h2 id="contact-modal-title" class="text-2xl font-bold text-[#0F0F10]">Send us a Message</h2>
+                <button id="contact-modal-close" type="button" aria-label="Close dialog"
+                    class="text-[#0F0F10] hover:text-[#C0392B] transition text-2xl leading-none p-1 ml-4">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="overflow-y-auto px-8 py-6 bg-white">
+                <div data-component="contact-form"></div>
+            </div>
+        </div>
+    </dialog>
 
     <!-- Scripts -->
     <script src="assets/js/components.js"></script>

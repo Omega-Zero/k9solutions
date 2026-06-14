@@ -52,11 +52,21 @@ function initContactForm() {
     const form = document.getElementById('contact-form');
     if (!form) return;
 
+    // Scope success/error lookups to the component container (supports both
+    // the contact page inline use and the training page modal use).
+    const formContainer = form.parentElement;
+
+    function findInContainer(selector) {
+        return formContainer
+            ? formContainer.querySelector(selector)
+            : document.querySelector(selector);
+    }
+
     form.addEventListener('submit', async function (e) {
         e.preventDefault();
 
         const submitBtn = form.querySelector('[type="submit"]');
-        const globalErrorEl = document.querySelector('[data-fs-error=""]');
+        const globalErrorEl = findInContainer('[data-fs-error=""]');
 
         // Reset global error
         if (globalErrorEl) {
@@ -91,7 +101,7 @@ function initContactForm() {
 
             if (response.ok) {
                 form.style.display = 'none';
-                const successEl = document.querySelector('[data-fs-success]');
+                const successEl = findInContainer('[data-fs-success]');
                 if (successEl) successEl.style.display = '';
             } else {
                 const json = await response.json().catch(() => ({}));
@@ -486,11 +496,64 @@ function initBoardingAccordion() {
     window.addEventListener('hashchange', openSectionFromHash);
 }
 
+function initContactModal() {
+    const modal = document.getElementById('contact-modal');
+    if (!modal) return;
+
+    const closeBtn = document.getElementById('contact-modal-close');
+
+    function openModal(service) {
+        // Reset form state so reopening always shows a fresh form
+        const form = modal.querySelector('#contact-form');
+        if (form) {
+            const container = form.parentElement;
+            const successEl = container ? container.querySelector('[data-fs-success]') : null;
+            const globalErrorEl = container ? container.querySelector('[data-fs-error=""]') : null;
+
+            form.style.display = '';
+            form.reset();
+
+            if (successEl) successEl.style.display = 'none';
+            if (globalErrorEl) {
+                globalErrorEl.style.display = 'none';
+                globalErrorEl.textContent = '';
+            }
+
+            const submitBtn = form.querySelector('[data-fs-submit-btn]');
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }
+
+            if (service) {
+                const serviceSelect = form.querySelector('[name="service"]');
+                if (serviceSelect) serviceSelect.value = service;
+            }
+        }
+        modal.showModal();
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => modal.close());
+    }
+
+    // Close when clicking the backdrop (outside the dialog panel)
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.close();
+    });
+
+    // Wire up all Contact buttons that carry the data attribute
+    document.querySelectorAll('[data-open-contact-modal]').forEach((btn) => {
+        btn.addEventListener('click', () => openModal(btn.dataset.service || ''));
+    });
+}
+
 // Initialize all interactive features after components load
 function initializePageFeatures() {
     initMobileMenu();
     initSmoothScroll();
     initContactForm();
+    initContactModal();
     initCardAnimations();
     initHeroVideo();
     initFAQ();
