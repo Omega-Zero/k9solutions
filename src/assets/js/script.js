@@ -404,6 +404,47 @@ function initFAQ() {
     });
 }
 
+// Handle opening training accordion sections based on URL hash
+function initTrainingAccordion() {
+    // All sub-section IDs within training accordion sections
+    const trainingIds = [
+        'puppy-obedience',
+        'basic-obedience',
+        'board-train-non-ecollar',
+        'behavior-modification',
+        'ecollar-class',
+        'board-train-ecollar',
+        'man-tracking',
+        'blood-tracking'
+    ];
+
+    function openSectionFromHash() {
+        const hash = window.location.hash.substring(1);
+
+        if (hash && trainingIds.includes(hash)) {
+            const element = document.getElementById(hash);
+            if (element) {
+                // Open the parent details accordion if the element is inside one
+                const detailsParent = element.closest('details');
+                if (detailsParent) {
+                    detailsParent.open = true;
+                }
+
+                // Scroll to the specific sub-section after a short delay
+                setTimeout(() => {
+                    element.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 100);
+            }
+        }
+    }
+
+    openSectionFromHash();
+    window.addEventListener('hashchange', openSectionFromHash);
+}
+
 // Handle opening accordion sections based on URL hash
 function initBoardingAccordion() {
     // List of boarding section IDs that can be opened via hash
@@ -455,6 +496,7 @@ function initializePageFeatures() {
     initFAQ();
     initImageCarousels();
     initBoardingAccordion();
+    initTrainingAccordion();
 }
 
 // Add animation on scroll for cards
