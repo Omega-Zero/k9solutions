@@ -34,6 +34,13 @@
                     Book a Consultation
                 </a>
             </div>
+            <!-- Mobile-only scroll prompt -->
+            <div class="block lg:hidden absolute bottom-[20%] left-0 right-0 flex justify-center" style="z-index: 2;">
+                <a href="#services" class="flex flex-col items-center gap-1 text-[#FAFAF7] opacity-80 hover:opacity-100 transition" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});return false;">
+                    <span class="text-base font-semibold tracking-wide">What We Offer</span>
+                    <i class="fas fa-chevron-down text-xl animate-bounce"></i>
+                </a>
+            </div>
         </section>
 
         <!-- Training & Boarding Section -->
