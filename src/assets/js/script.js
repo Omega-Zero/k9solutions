@@ -127,6 +127,16 @@ function initContactForm() {
             }
         }
     });
+
+    // Show/hide phone deposit notice when a boarding-related service is selected
+    const boardingNotice = findInContainer('#boarding-phone-notice');
+    const serviceSelect = form.querySelector('[name="service"]');
+    const boardingServices = ['Pet Boarding', 'Board and Train (Non E-Collar)', 'Board and Train (E-Collar)'];
+    if (boardingNotice && serviceSelect) {
+        serviceSelect.addEventListener('change', function () {
+            boardingNotice.style.display = boardingServices.indexOf(this.value) !== -1 ? 'flex' : 'none';
+        });
+    }
 }
 
 function initSmoothScroll() {
@@ -527,7 +537,13 @@ function initContactModal() {
 
             if (service) {
                 const serviceSelect = form.querySelector('[name="service"]');
-                if (serviceSelect) serviceSelect.value = service;
+                if (serviceSelect) {
+                    serviceSelect.value = service;
+                    serviceSelect.dispatchEvent(new Event('change'));
+                }
+            } else {
+                const serviceSelect = form.querySelector('[name="service"]');
+                if (serviceSelect) serviceSelect.dispatchEvent(new Event('change'));
             }
         }
         modal.showModal();
