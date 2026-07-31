@@ -102,6 +102,15 @@ if (fs.existsSync(componentsDir)) {
   });
 }
 
+// Copy sitemap.xml and robots.txt to dist root
+['sitemap.xml', 'robots.txt'].forEach(file => {
+  const src = path.join('src', file);
+  if (fs.existsSync(src)) {
+    fs.copyFileSync(src, path.join('dist', file));
+    console.log(`Copied ${file}`);
+  }
+});
+
 // Create .nojekyll file for GitHub Pages
 fs.writeFileSync(path.join('dist', '.nojekyll'), '');
 console.log('Created .nojekyll file');
