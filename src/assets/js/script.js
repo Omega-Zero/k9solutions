@@ -578,6 +578,15 @@ function initializePageFeatures() {
     initTrainingAccordion();
 }
 
+function scrollToServices() {
+    document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+    if (window.innerWidth < 768) {
+        var cards = document.querySelectorAll('#services .shadow');
+        setTimeout(function () { if (cards[1]) cards[1].classList.add('animate-in'); }, 400);
+        setTimeout(function () { if (cards[2]) cards[2].classList.add('animate-in'); }, 600);
+    }
+}
+
 // Add animation on scroll for cards
 function initCardAnimations() {
     const observerOptions = {
