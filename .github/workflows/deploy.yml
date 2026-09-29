@@ -16,6 +16,25 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  codeql:
+    name: CodeQL SAST
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript-typescript
+
+      - name: Analyze code
+        uses: github/codeql-action/analyze@v3
+
   dependency-review:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
